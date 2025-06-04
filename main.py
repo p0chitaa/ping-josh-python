@@ -82,10 +82,12 @@ async def on_message(message):
         "pinged josh" in message.content.lower() or
         "josh been pinged" in message.content.lower()
     ):
-        await message.channel.send(f"<@294973220027891712> has been pinged {current_count} + 1 times")
+        print("checking")
         count = open("count.txt", "r+")
         current_count = int(count.read())
         current_count += 1
+        
+        await message.channel.send(f"<@294973220027891712> has been pinged {current_count - 1} + 1 times")
         count.seek(0)
         count.write(str(current_count))
         count.close()
