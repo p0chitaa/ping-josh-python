@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import discord
 import random
 from discord.ext import commands
@@ -40,9 +42,12 @@ async def on_message(message):
     if(message.author.id == 857363953973198849 and ("ping my discord kitten" in message.content.lower())):
         await message.reply("<@176861491763347456>")
 
+    if(message.author.id == 176861491763347456 and ("ping my pookie bear" in message.content.lower())):
+        await message.reply("<@857363953973198849>")
+
     # if message contains the phrase "ping josh", ping josh
     if("ping josh" in message.content.lower()):
-        print("pinging josh")
+        # print("pinging josh")
         await message.channel.send("<@294973220027891712>")
         count = open("count.txt", "r+")
         current_count = int(count.read())
@@ -52,7 +57,7 @@ async def on_message(message):
         count.close()
     
     if("chicken jockey" in message.content.lower()):
-        print("chicken jockey")
+        # print("chicken jockey")
         await message.reply(file=discord.File("chicken_jockey.gif"))
     
     if("asuh dude" in message.content.lower()):
@@ -66,15 +71,15 @@ async def on_message(message):
         "i'm not" in message.content.lower() or 
         "im not" in message.content.lower()
     )):
-        print("furry detected")
+        # print("furry detected")
         await message.reply(file=discord.File("download.png"))
     
     if("ping gooch" in message.content.lower()):
-        print("pinging gooch")
+        # print("pinging gooch")
         await message.channel.send("<@176861491763347456>")
 
     if("ping the frog" in message.content.lower()):
-        print("ribbit")
+        # print("ribbit")
         await message.channel.send("<@128014556524969984>")
 
     if(
@@ -82,7 +87,7 @@ async def on_message(message):
         "pinged josh" in message.content.lower() or
         "josh been pinged" in message.content.lower()
     ):
-        print("checking")
+        # print("checking")
         count = open("count.txt", "r+")
         current_count = int(count.read())
         current_count += 1
@@ -100,7 +105,7 @@ async def on_message(message):
         "wheres oly" in message.content.lower() or
         "when is oly" in message.content.lower()
     ):
-        print("pinging oly")
+        # print("pinging oly")
         await message.channel.send("<@146441250617163776>") # ping oly
 
     if(message.content.lower() == "jarvis" or message.content.lower() == "hey jarvis" or message.content.lower() == "hey, jarvis" or (message.author.id == 176861491763347456 and message.content.lower() == ("shut the fuck up jarvis"))):
