@@ -117,6 +117,9 @@ async def on_message(message):
     if(message.content.lower() == "show me this guys balls" or message.content.lower() == "show me this guy's balls"):
         await message.reply(file=discord.File("contact-juggling-training.gif"))
 
+    if("eat paint" in message.content.lower()):
+        await message.reply(file=discord.File("image0.webp"))
+
     if message.content.lower().startswith("kill <@"):
         await message.reply(file=discord.File("./jarvis.gif"))
 
