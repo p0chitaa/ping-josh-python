@@ -139,6 +139,9 @@ async def on_message(message):
     ):
         await message.reply(file=discord.File("./congrats.png"))
 
+    if ("jarvis" in message.content.lower() and "mushroom" in message.content.lower()):
+        await message.reply(file=discord.File("./a_long_long_time_ago.mp4"));
+
     if message.content.lower() in ["i am getting on vr", "im getting on vr", "i'm getting on vr"]:
         await message.reply("*goon goggles")
 
